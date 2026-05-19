@@ -1,5 +1,5 @@
 ---
-name: stefan-weread-essay
+name: weread-essay-skill
 description: 微信读书读后感写作助手。帮助用户基于某本书或某个章节，生成一篇带有个人见解的读后感，正文严格控制原文摘抄，附录完整保留所有划线内容及即时感想。底层依赖 weread-skills（微信读书原子 API）和 huashu-weread-advisor（微信读书高阶顾问工作流）。当用户说「写一篇读后感」「帮我整理笔记写感想」「这本书/这章我想写篇公众号文章」时触发。
 version: 1.0.0
 tags: []
