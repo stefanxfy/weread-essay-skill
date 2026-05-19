@@ -6,25 +6,10 @@
 
 本 skill 依赖以下两个底层 skill，**必须先安装**：
 
-| Skill | 说明 | 路径 |
+| Skill | 说明 | 安装文档 |
 |-------|------|------|
-| `weread-skills` | 微信读书原子 API，提供书籍搜索、划线读取、笔记获取等接口 | `~/.hermes/skills/weread-skills/` |
-| `huashu-weread-advisor` | 微信读书高阶顾问工作流，提供书架分析、书单推荐、阅读复盘等编排规则 | `~/.hermes/skills/huashu-weread-advisor/` |
-
-安装方式：
-```bash
-# 安装 weread-skills（微信读书原子 API）
-npx skills add weread-skills
-
-# 安装 huashu-weread-advisor（高阶顾问工作流）
-npx skills add huashu-weread-advisor
-```
-
-> ⚠️ `npx skills add` 克隆到 `/private/tmp/.agents/skills/<skill>/`，不会自动同步到 `~/.hermes/skills/`。安装完成后需手动执行：
-> ```bash
-> cp -r /private/tmp/.agents/skills/weread-skills/ ~/.hermes/skills/
-> cp -r /private/tmp/.agents/skills/huashu-weread-advisor/ ~/.hermes/skills/
-> ```
+| `weread-skills` | 微信读书原子 API，提供书籍搜索、划线读取、笔记获取等接口 | [weread-skills 安装指南](https://weread.qq.com/r/weread-skills) |
+| `huashu-weread-advisor` | 微信读书高阶顾问工作流，提供书架分析、书单推荐、阅读复盘等编排规则 | [huashu-weread-advisor 安装指南](https://github.com/alchaincyf/huashu-weread) |
 
 ## 安装本 Skill
 
