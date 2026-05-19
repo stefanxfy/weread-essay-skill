@@ -5,7 +5,7 @@ version: 1.0.0
 tags: []
 ---
 
-# stefan-weread-essay
+# weread-essay-skill
 
 微信读书读后感写作助手。把你在微信读书里的划线和想法，变成一篇真正值得发的文章。
 
