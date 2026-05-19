@@ -11,25 +11,15 @@
 | `weread-skills` | 微信读书原子 API，提供书籍搜索、划线读取、笔记获取等接口 | [weread-skills 安装指南](https://weread.qq.com/r/weread-skills) |
 | `huashu-weread-advisor` | 微信读书高阶顾问工作流，提供书架分析、书单推荐、阅读复盘等编排规则 | [huashu-weread-advisor 安装指南](https://github.com/alchaincyf/huashu-weread) |
 
-## 安装本 Skill
+## 安装
 
-### 方式一：从 GitHub 安装（推荐）
-
-```bash
-# 克隆仓库到任意目录
-git clone git@github.com:stefanxfy/weread-essay-skill.git ~/weread-essay-skill
-
-# 同步到 Hermes skills 目录
-cp -r ~/weread-essay-skill ~/.hermes/skills/weread-essay-skill
-```
-
-### 方式二：本地已有开发目录
-
-开发目录已 clone 到本地，直接同步：
+从 GitHub 克隆后，按你的 Agent 产品说明加载 skill。典型方式：
 
 ```bash
-cp -r /Users/fanyunxu/Desktop/myproject/ailearning/weread-essay-skill/ ~/.hermes/skills/weread-essay-skill
+git clone git@github.com:stefanxfy/weread-essay-skill.git
 ```
+
+加载方式请参考对应 Agent 产品的 skill 加载文档。
 
 ## 前置要求
 
@@ -68,30 +58,22 @@ cp -r /Users/fanyunxu/Desktop/myproject/ailearning/weread-essay-skill/ ~/.hermes
   （全部保留，不删减）
 ```
 
-## 开发说明
-
-| 路径 | 说明 |
-|------|------|
-| `/Users/fanyunxu/Desktop/myproject/ailearning/weread-essay-skill/` | 开发目录（带 Git） |
-| `~/.hermes/skills/weread-essay-skill/` | Hermes 运行时目录 |
-
-**开发流程**：改开发目录 → `git commit && git push` → 同步到 Hermes 运行目录
-
-```bash
-cd /Users/fanyunxu/Desktop/myproject/ailearning/weread-essay-skill
-git add . && git commit -m "update" && git push
-
-# 同步到 Hermes
-cp -r workflows/ ~/.hermes/skills/weread-essay-skill/
-cp SKILL.md ~/.hermes/skills/weread-essay-skill/
-```
-
 ## 文件结构
 
 ```
 weread-essay-skill/
 ├── README.md          # 本文件
-├── SKILL.md           # Skill 元数据（Hermes 加载用）
+├── SKILL.md           # Skill 元数据
 └── workflows/
     └── essay.md       # 读后感写作工作流详细规范
+```
+
+## 本地开发
+
+如需修改 skill内容，先在本地修改，测试通过后提交 GitHub：
+
+```bash
+cd weread-essay-skill
+# 编辑 SKILL.md 或 workflows/essay.md
+git add . && git commit -m "your changes" && git push
 ```
